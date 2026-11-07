@@ -1,0 +1,13 @@
+{
+  "data": [
+    { "id": 1, "name": "Restaurants", "slug": "restaurants" },
+    { "id": 2, "name": "Barbing Salons", "slug": "barbing-salons" },
+    { "id": 3, "name": "Churches", "slug": "churches" },
+    { "id": 4, "name": "Schools", "slug": "schools" },
+    { "id": 5, "name": "Hospitals", "slug": "hospitals" },
+    { "id": 6, "name": "Pharmacies", "slug": "pharmacies" },
+    { "id": 7, "name": "Supermarkets", "slug": "supermarkets" },
+    { "id": 8, "name": "Mechanics", "slug": "mechanics" },
+    { "id": 9, "name": "Gyms", "slug": "gyms" }
+  ]
+}
