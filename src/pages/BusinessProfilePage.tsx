@@ -1,24 +1,28 @@
+// src/pages/BusinessProfilePage.tsx
 import { useParams } from "react-router";
+import Container from "../components/layout/Container";
+import { slugSchema } from "../lib/slug";
+import NotFoundPage from "./NotFoundPage";
 
 export default function BusinessProfilePage() {
-  // useParams returns an object whose values may be a string OR undefined.
-  // TypeScript cannot know that the route really has a ":slug" in it.
-  const { slug } = useParams();
+  const params = useParams();
 
-  // Narrowing: if slug is missing, stop here. Below this line, slug is a string.
-  if (!slug) {
-    return (
-      <div className="mx-auto max-w-6xl px-4 py-8">
-        <p className="text-slate-700">No business was specified.</p>
-      </div>
-    );
+  // params.slug is typed "string | undefined" and comes from the address bar, so treat it as untrusted.
+  const result = slugSchema.safeParse(params.slug);
+  if (!result.success) {
+    return <NotFoundPage />;
   }
+  const slug = result.data; // from here on TypeScript knows it is a valid string
 
   return (
-    <div className="mx-auto max-w-6xl px-4 py-8">
-      <h1 className="text-2xl font-semibold text-slate-900">
-        Business: {slug}
-      </h1>
-    </div>
+    <Container>
+      <title>{`${slug} - Locale`}</title>
+      <div className="py-12">
+        <h1 className="text-3xl font-bold tracking-tight">Business: {slug}</h1>
+        <p className="mt-3 max-w-xl text-muted">
+          The full profile will load here.
+        </p>
+      </div>
+    </Container>
   );
 }

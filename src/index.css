@@ -1,1 +1,26 @@
 @import "tailwindcss";
+
+/* Design tokens. Tailwind v4 turns each --color-* into classes like bg-mist, text-ink. */
+@theme {
+  --color-ink: #17302d;
+  --color-muted: #51635f;
+  --color-line: #dce5e3;
+  --color-mist: #f4f8f7;
+  --color-brand: #0e7c74;
+  --color-brand-deep: #0a5c56;
+
+  --font-sans: "Schibsted Grotesk", ui-sans-serif, system-ui, sans-serif;
+}
+
+@layer base {
+  body {
+    @apply bg-white font-sans text-ink antialiased;
+  }
+
+  /* One visible keyboard-focus style for every link and button. */
+  :focus-visible {
+    outline: 2px solid var(--color-brand);
+    outline-offset: 3px;
+    border-radius: 4px;
+  }
+}

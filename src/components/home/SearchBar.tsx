@@ -1,43 +1,16 @@
-import { useState, type FormEvent } from "react";
-import { useNavigate } from "react-router";
+// src/pages/SearchPage.tsx
+import Container from "../layout/Container";
 
-export default function SearchBar() {
-  const [text, setText] = useState("");
-  const navigate = useNavigate();
-
-  function handleSubmit(event: FormEvent<HTMLFormElement>) {
-    event.preventDefault(); // stop the browser's full page reload
-
-    const query = text.trim();
-    if (query === "") {
-      navigate("/search");
-      return;
-    }
-
-    const params = new URLSearchParams({ q: query });
-    navigate(`/search?${params.toString()}`);
-  }
-
+export default function SearchPage() {
   return (
-    <form onSubmit={handleSubmit} className="flex gap-2" role="search">
-      <label htmlFor="home-search" className="sr-only">
-        Search by city, neighbourhood, street or landmark
-      </label>
-      <input
-        id="home-search"
-        type="search"
-        value={text}
-        onChange={(event) => setText(event.target.value)}
-        maxLength={100}
-        placeholder="Search a neighbourhood, street or landmark"
-        className="w-full rounded-md border border-slate-300 px-4 py-2 focus:border-teal-600 focus:outline-none focus:ring-1 focus:ring-teal-600"
-      />
-      <button
-        type="submit"
-        className="rounded-md bg-teal-600 px-5 py-2 font-medium text-white hover:bg-teal-700"
-      >
-        Search
-      </button>
-    </form>
+    <Container>
+      <title>Search - Locale</title>
+      <div className="py-12">
+        <h1 className="text-3xl font-bold tracking-tight">Search</h1>
+        <p className="mt-3 max-w-xl text-muted">
+          Businesses will be listed here.
+        </p>
+      </div>
+    </Container>
   );
 }

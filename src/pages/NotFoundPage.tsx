@@ -1,18 +1,24 @@
 import { Link } from "react-router";
+import Container from "../components/layout/Container";
 
 export default function NotFoundPage() {
   return (
-    <div className="mx-auto max-w-6xl px-4 py-16 text-center">
-      <h1 className="text-3xl font-semibold text-slate-900">Page not found</h1>
-      <p className="mt-2 text-slate-600">
-        We could not find the page you were looking for.
-      </p>
-      <Link
-        to="/"
-        className="mt-6 inline-block rounded-md bg-teal-600 px-4 py-2 text-white hover:bg-teal-700"
-      >
-        Back to home
-      </Link>
-    </div>
+    <Container>
+      <title>Page not found - Locale</title>
+      <div className="py-16 sm:py-24">
+        <h1 className="text-3xl font-bold tracking-tight">
+          This page does not exist
+        </h1>
+        <p className="mt-3 max-w-xl text-muted">
+          The address may be mistyped, or the page may have been moved.
+        </p>
+        <Link
+          to="/"
+          className="mt-8 inline-block font-medium text-brand underline underline-offset-4 hover:text-brand-deep"
+        >
+          Go to the home page
+        </Link>
+      </div>
+    </Container>
   );
 }

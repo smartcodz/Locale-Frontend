@@ -1,5 +1,5 @@
 import { useQuery } from "@tanstack/react-query";
-import { getCategories } from "../api/categories.api";
+import { getCategories } from "../api/category.api";
 
 // Exported so later code (for example cache invalidation after an admin edit)
 // can refer to the same key without retyping it.

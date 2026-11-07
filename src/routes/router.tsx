@@ -1,10 +1,10 @@
+// src/routes/router.tsx
 import { createBrowserRouter } from "react-router";
-
 import AppLayout from "../components/layout/AppLayout";
-import HomePage from "../pages/HomePage";
-import SearchPage from "../pages/SearchPage";
 import BusinessProfilePage from "../pages/BusinessProfilePage";
+import HomePage from "../pages/HomePage";
 import NotFoundPage from "../pages/NotFoundPage";
+import SearchPage from "../pages/SearchPage";
 
 export const router = createBrowserRouter([
   {
