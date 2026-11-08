@@ -1,0 +1,69 @@
+{
+  "data": [
+    {
+      "id": 1,
+      "slug": "sample-buka-ugbowo",
+      "name": "Sample Buka",
+      "category": { "name": "Restaurants", "slug": "restaurants" },
+      "area": "Ugbowo",
+      "address": "12 Example Street, Ugbowo",
+      "phone": "0800 000 0001",
+      "priceRange": "low",
+      "ratingAverage": null,
+      "reviewCount": 0,
+      "isSample": true
+    },
+    {
+      "id": 2,
+      "slug": "sample-grill-gra",
+      "name": "Sample Grill House",
+      "category": { "name": "Restaurants", "slug": "restaurants" },
+      "area": "GRA",
+      "address": "4 Example Avenue, GRA",
+      "phone": "0800 000 0002",
+      "priceRange": "high",
+      "ratingAverage": null,
+      "reviewCount": 0,
+      "isSample": true
+    },
+    {
+      "id": 3,
+      "slug": "sample-pharmacy-uselu",
+      "name": "Sample Pharmacy",
+      "category": { "name": "Pharmacies", "slug": "pharmacies" },
+      "area": "Uselu",
+      "address": "7 Example Road, Uselu",
+      "phone": "0800 000 0003",
+      "priceRange": "medium",
+      "ratingAverage": null,
+      "reviewCount": 0,
+      "isSample": true
+    },
+    {
+      "id": 4,
+      "slug": "sample-barbers-ring-road",
+      "name": "Sample Barbers",
+      "category": { "name": "Barbing Salons", "slug": "barbing-salons" },
+      "area": "Ring Road",
+      "address": "21 Example Close, Ring Road",
+      "phone": "0800 000 0004",
+      "priceRange": "low",
+      "ratingAverage": null,
+      "reviewCount": 0,
+      "isSample": true
+    },
+    {
+      "id": 5,
+      "slug": "sample-gym-gra",
+      "name": "Sample Fitness Club",
+      "category": { "name": "Gyms", "slug": "gyms" },
+      "area": "GRA",
+      "address": "9 Example Crescent, GRA",
+      "phone": "0800 000 0005",
+      "priceRange": "medium",
+      "ratingAverage": null,
+      "reviewCount": 0,
+      "isSample": true
+    }
+  ]
+}
